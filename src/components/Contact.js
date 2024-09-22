@@ -16,7 +16,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div 
             className="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-lg transform hover:scale-105 transition-transform duration-300"
-            data-aos="fade-right"
+            data-aos="fade-left"
           >
             <h3 className="text-2xl font-semibold mb-6 text-blue-300">Contact Information</h3>
             <div className="space-y-6">

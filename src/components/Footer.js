@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0" data-aos="fade-right">
+          <div className="mb-4 md:mb-0" data-aos="fade-left">
             <h2 className="text-2xl font-bold mb-2">Mohammed Yazin</h2>
             <p className="text-gray-400">Full Stack Developer</p>
           </div>
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0" data-aos="fade-right">
+          <p className="text-gray-400 text-sm mb-4 md:mb-0" data-aos="fade-left">
             &copy; {currentYear} Mohammed Yazin. All rights reserved.
           </p>
           <nav className="flex space-x-4" data-aos="fade-left">
