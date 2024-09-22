@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'lucide-react';
 
 const projects = [
   {
@@ -69,6 +70,7 @@ export default function Projects() {
             >
               <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
               <div className="p-6">
+                <a href={project.link} className='text-xs flex align-center items-center gap-2 text-blue-500'><Link/> Visit Site</a>
                 <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{project.description.substring(0, 100)}...</p>
                 <div className="flex flex-wrap gap-2">
