@@ -42,7 +42,7 @@ export default function Footer() {
           </nav>
         </div>
       </div>
-      <div className="mt-8 text-center" data-aos="fade-up">
+      <div className="mt-8 text-center" data-aos="fade-in">
         <p className="text-gray-400 text-sm">
           Designed and built by Mohammed Yazin   </p>
       </div>
