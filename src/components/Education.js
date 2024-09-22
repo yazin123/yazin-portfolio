@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const educationData = [
   {
     year: 2023,
-    degree: "Bachelor of Vocation (B.Voc) in Software Development and System Administration",
+    degree: "B.Voc in Software Development and System Administration",
     institution: "MG University, Kottayam",
     details: "Specialized in full-stack development and system administration. Completed multiple real-world projects."
   },
