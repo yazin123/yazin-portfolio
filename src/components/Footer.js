@@ -1,6 +1,6 @@
 // File: src/components/Footer.js
 'use client';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope, FaInstagram } from 'react-icons/fa'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -17,11 +17,14 @@ export default function Footer() {
             <a href="https://github.com/yazin123" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
               <FaGithub className="text-2xl" />
             </a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+            <a href="https://www.linkedin.com/in/mohammed-yazin-131736218/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
               <FaLinkedin className="text-2xl" />
             </a>
-            <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
-              <FaTwitter className="text-2xl" />
+            <a href="https://wa.me/917994857990" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+              <FaWhatsapp className="text-2xl" />
+            </a>
+            <a href="https://www.instagram.com/hmm.yazin/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+              <FaInstagram className="text-2xl" />
             </a>
             <a href="mailto:mohammedyazin4@gmail.com" className="hover:text-blue-400 transition-colors">
               <FaEnvelope className="text-2xl" />
