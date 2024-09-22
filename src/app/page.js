@@ -17,7 +17,7 @@ import ParticlesBackground from '../components/ParticlesBackground'
 export default function Home() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 600,
       once: true,
     });
   }, []);
