@@ -8,7 +8,7 @@ const contactMethods = [
   { icon: FaEnvelope, label: 'Email', value: 'mohammedyazin4@gmail.com', link: 'mailto:mohammedyazin4@gmail.com' },
   { icon: FaInstagram, label: 'Instagram', value: 'https://www.instagram.com/hmm.yazin/', link: 'https://www.instagram.com/hmm.yazin/' },
   { icon: FaGithub, label: 'GitHub', value: 'github.com/yazin123', link: 'https://github.com/yazin123' },
-  { icon: FaLinkedin, label: 'LinkedIn', value: 'linkedin.com/in/yourprofile', link: 'https://linkedin.com/in/yourprofile' },
+  { icon: FaLinkedin, label: 'LinkedIn', value: 'https://www.linkedin.com/in/mohammed-yazin-131736218/', link: 'https://www.linkedin.com/in/mohammed-yazin-131736218/' },
 ];
 
 export default function Contact() {
