@@ -80,7 +80,7 @@ export default function Hero() {
       >
         {[
           { icon: FaGithub, href: "https://github.com/yourusername" },
-          { icon: FaLinkedin, href: "https://linkedin.com/in/yourusername" },
+          { icon: FaLinkedin, href: "https://www.linkedin.com/in/mohammed-yazin-131736218/" },
           { icon: FaEnvelope, href: "mailto:your.email@example.com" }
         ].map((item, index) => (
           <motion.a
