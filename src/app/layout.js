@@ -15,7 +15,7 @@ export const metadata = {
     url: 'https://mohammedyazin.com',
     images: [
       {
-        url: '/img/yazin.jpg', // Use absolute path
+        url: 'https://mohammedyazin.com/img/yazin.jpg', // Use absolute URL
         alt: 'Mohammed Yazin',
       },
     ],
@@ -27,9 +27,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <link rel="icon" type="image/x-icon" href="/img/yazin.jpg" /> {/* Use absolute path */}
-        <meta property="og:image" content="/img/yazin.jpg" /> {/* Use absolute path */}
+        <link rel="icon" type="image/x-icon" href="/img/yazin.jpg" /> {/* Absolute path for favicon */}
+        <meta property="og:image" content="https://mohammedyazin.com/img/yazin.jpg" /> {/* Absolute URL for Open Graph */}
         <meta property="og:image:alt" content="Mohammed Yazin" />
+        <meta property="og:url" content="https://mohammedyazin.com" />
+        <meta property="og:title" content="Mohammed Yazin - Full Stack Developer" />
+        <meta property="og:description" content="Explore the portfolio of Mohammed Yazin, a skilled developer in Next.js and Django." />
       </Head>
       <body className={montserrat.className}>{children}</body>
     </html>
