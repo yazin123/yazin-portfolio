@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <main className="relative bg-gradient-to-br from-gray-900 to-blue-900 text-white min-h-screen">
-      <ParticlesBackground />
+      <ParticlesBackground style={{width:"100%"}} />
       <div className="relative z-10">
         <Header />
         <Hero />
