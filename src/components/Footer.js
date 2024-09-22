@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0" data-aos="fade-right">
+          <p className="text-gray-400 text-sm mb-4 md:mb-0">
             &copy; {currentYear} Mohammed Yazin. All rights reserved.
           </p>
           <nav className="flex space-x-4" data-aos="fade-right">
@@ -42,7 +42,7 @@ export default function Footer() {
           </nav>
         </div>
       </div>
-      <div className="mt-8 text-center" data-aos="fade-right">
+      <div className="mt-8 text-center" >
         <p className="text-gray-400 text-sm">
           Designed and built by Mohammed Yazin   </p>
       </div>

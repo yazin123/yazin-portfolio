@@ -32,7 +32,7 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all  duration-300  ${isMobileMenuOpen ? 'bg-gray-900 shadow-lg' : isScrolled ? 'bg-gray-900 shadow-lg' : 'bg-transparent'}}`} >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
-          <div className="text-2xl font-bold" data-aos="fade-right"><Image src="/img/yazin.jpg"  width="50" height="50" className="rounded-full bg-cover"  /></div>
+          <div className="text-2xl font-bold" data-aos="fade-right"><Image src="/img/yazin.jpg" alt='Mohammed Yazin'  width="50" height="50" className="rounded-full bg-cover"  /></div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-4" data-aos="fade-down">
@@ -77,9 +77,9 @@ export default function Header() {
               <a href="https://github.com/yazin123" target="_blank" rel="noopener noreferrer">
                 <FaGithub className="text-2xl hover:text-blue-400 transition-colors" />
               </a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="text-2xl hover:text-blue-400 transition-colors" />
-              </a>
+              <a href="https://wa.me/917994857990/" target="_blank" rel="noopener noreferrer">
+              <FaWhatsapp className="text-2xl hover:text-blue-400 transition-colors" />
+            </a>
             </div>
           </div>
         )}

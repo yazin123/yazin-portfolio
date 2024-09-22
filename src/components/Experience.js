@@ -45,7 +45,7 @@ const experienceData = [
 const ExperienceItem = ({ item, index }) => (
   <div className="mb-10 relative" data-aos="fade-up" data-aos-delay={index * 100}>
     <div className="absolute w-6 h-6 bg-white rounded-full -left-9 border-4 border-gray-800"></div>
-    <div className=" backdrop-blur-lg bg-gray-900/50 p-6 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-gray-900 drop-shadow-2xl">
+    <div className=" backdrop-blur-lg bg-gray-900/20 p-6 rounded-lg shadow-lg transition duration-300 ease-in-out drop-shadow-2xl">
       <div className="flex items-center mb-4">
         <item.icon className="text-white mr-2 text-2xl" />
         <h3 className="text-xl font-semibold text-white">{item.title}</h3>

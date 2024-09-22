@@ -1,29 +1,38 @@
-// File: src/components/Skills.js
 'use client'
 import { useState } from 'react';
-import { FaPython, FaPhp, FaNodeJs, FaReact, FaDatabase, FaDocker, FaAws, FaHtml5, FaCss3Alt, FaJs } from 'react-icons/fa';
-import { SiDjango, SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiTypescript, SiGraphql, SiRedux } from 'react-icons/si';
+import { FaPython, FaPhp, FaNodeJs, FaReact, FaDatabase, FaDocker, FaAws, FaHtml5, FaCss3Alt, FaJs, FaUbuntu } from 'react-icons/fa';
+import { SiDjango, SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiTypescript, SiGraphql, SiRedux, SiPostman, SiVisualstudiocode, SiTwilio, SiWordpress, SiDigitalocean, SiSqlite, SiMeta } from 'react-icons/si';
+import { RiLoginCircleLine } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 
 const skills = [
-  { name: 'React', icon: FaReact, category: 'Frontend' },
-  { name: 'Next.js', icon: SiNextdotjs, category: 'Frontend' },
-  { name: 'JavaScript', icon: FaJs, category: 'Frontend' },
-  { name: 'TypeScript', icon: SiTypescript, category: 'Frontend' },
-  { name: 'HTML5', icon: FaHtml5, category: 'Frontend' },
-  { name: 'CSS3', icon: FaCss3Alt, category: 'Frontend' },
-  { name: 'Tailwind CSS', icon: SiTailwindcss, category: 'Frontend' },
-  { name: 'Redux', icon: SiRedux, category: 'Frontend' },
-  { name: 'Node.js', icon: FaNodeJs, category: 'Backend' },
-  { name: 'Python', icon: FaPython, category: 'Backend' },
-  { name: 'Django', icon: SiDjango, category: 'Backend' },
-  { name: 'PHP', icon: FaPhp, category: 'Backend' },
-  { name: 'GraphQL', icon: SiGraphql, category: 'Backend' },
-  { name: 'MongoDB', icon: SiMongodb, category: 'Database' },
-  { name: 'PostgreSQL', icon: SiPostgresql, category: 'Database' },
-  { name: 'MySQL', icon: FaDatabase, category: 'Database' },
-  { name: 'Docker', icon: FaDocker, category: 'DevOps' },
-  { name: 'AWS', icon: FaAws, category: 'DevOps' },
+  { name: 'Django', icon: SiDjango, category: 'Backend', color: 'white' },
+  { name: 'Next.js', icon: SiNextdotjs, category: 'Frontend', color: 'white' },
+  { name: 'JavaScript', icon: FaJs, category: 'Frontend', color: '#F7DF1E' },
+  { name: 'TypeScript', icon: SiTypescript, category: 'Frontend', color: '#3178C6' },
+  { name: 'React', icon: FaReact, category: 'Frontend', color: '#61DAFB' },
+  { name: 'HTML5', icon: FaHtml5, category: 'Frontend', color: '#E34F26' },
+  { name: 'CSS3', icon: FaCss3Alt, category: 'Frontend', color: '#1572B6' },
+  { name: 'Tailwind CSS', icon: SiTailwindcss, category: 'Frontend', color: '#06B6D4' },
+  { name: 'Redux', icon: SiRedux, category: 'Frontend', color: '#764ABC' },
+  { name: 'Node.js', icon: FaNodeJs, category: 'Backend', color: '#339933' },
+  { name: 'Python', icon: FaPython, category: 'Backend', color: '#3776AB' },
+  { name: 'PHP', icon: FaPhp, category: 'Backend', color: '#777BB4' },
+  { name: 'GraphQL', icon: SiGraphql, category: 'Backend', color: '#E10098' },
+  { name: 'MongoDB', icon: SiMongodb, category: 'Database', color: '#47A248' },
+  { name: 'PostgreSQL', icon: SiPostgresql, category: 'Database', color: '#336791' },
+  { name: 'MySQL', icon: FaDatabase, category: 'Database', color: '#4479A1' },
+  { name: 'Docker', icon: FaDocker, category: 'DevOps', color: '#2496ED' },
+  { name: 'AWS', icon: FaAws, category: 'DevOps', color: '#FF9900' },
+  { name: 'Postman', icon: SiPostman, category: 'Tools', color: '#FF6C37' },
+  { name: 'VSCode', icon: SiVisualstudiocode, category: 'Tools', color: '#007ACC' },
+  { name: 'Ubuntu', icon: FaUbuntu, category: 'OS', color: '#E95420' },
+  { name: 'Twilio', icon: SiTwilio, category: 'API', color: 'red' },
+  { name: 'Wordpress', icon: SiWordpress, category: 'WCMS', color: 'white' },
+  { name: 'OTPless', icon: RiLoginCircleLine, category: 'Authentication', color: '#4CAF50' },
+  { name: 'DigitalOcean', icon: SiDigitalocean, category: 'DevOps', color: '#4CAF50' },
+  { name: 'Sqlite3', icon: SiSqlite, category: 'Database', color: 'blue' },
+  { name: 'Meta Ads', icon: SiMeta, category: 'Marketing', color: 'white' },
 ];
 
 export default function Skills() {
@@ -46,10 +55,10 @@ export default function Skills() {
               onHoverEnd={() => setHoveredSkill(null)}
             >
               <motion.div
-                className="flex flex-col items-center justify-center p-10 bg-gray-900/50 backdrop-blur-md rounded-lg shadow-lg transition-all duration-300 group-hover:bg-gray-700 h-full"
+                className="flex flex-col items-center justify-center p-10 bg-gray-900/20 border border-white backdrop-blur-md rounded-lg shadow-lg transition-all duration-300 h-full"
                 whileHover={{ scale: 1.05 }}
               >
-                <skill.icon className="text-4xl mb-3 text-white group-hover:text-blue-300" />
+                <skill.icon className="text-4xl mb-3" style={{ color: skill.color }} />
                 <span className="text-sm text-center text-gray-300 group-hover:text-white">{skill.name}</span>
               </motion.div>
               {hoveredSkill === skill && (
@@ -65,8 +74,6 @@ export default function Skills() {
             </motion.div>
           ))}
         </div>
-
-     
       </div>
     </section>
   );
