@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { FaEnvelope, FaGithub, FaWhatsapp, FaLinkedin, FaComments, FaTimes, FaInstagram } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
+import { FaEnvelope, FaGithub, FaWhatsapp, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const contactMethods = [
   { icon: FaEnvelope, label: 'Email', value: 'mohammedyazin4@gmail.com', link: 'mailto:mohammedyazin4@gmail.com' },
@@ -13,7 +13,6 @@ const contactMethods = [
 
 export default function Contact() {
   const [activeMethod, setActiveMethod] = useState(null);
-  const [isWhatsAppOpen, setIsWhatsAppOpen] = useState(false);
 
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/917994857990', '_blank');
@@ -37,7 +36,7 @@ export default function Contact() {
               onHoverEnd={() => setActiveMethod(null)}
               whileHover={{ scale: 1.1 }}
             >
-              <a href={method.link} className="bg-white bg-opacity-10 p-4 rounded-lg backdrop-filter backdrop-blur-lg flex flex-col items-center justify-center aspect-square">
+              <a href={method.link} target="_blank" rel="noopener noreferrer" className="bg-white bg-opacity-10 p-4 rounded-lg backdrop-filter backdrop-blur-lg flex flex-col items-center justify-center aspect-square">
                 <method.icon className="text-4xl text-white mb-2" />
               </a>
             </motion.div>
@@ -55,57 +54,14 @@ export default function Contact() {
             I'm always excited to work on new projects and explore innovative ideas. Whether you have a specific project in mind or just want to chat about the latest in tech, I'm all ears!
           </p>
           <div className="text-center">
-            <motion.div
-              className="inline-block relative"
+            <motion.button
+              className="px-6 py-3 bg-green-500 text-white font-semibold rounded-full transition-all duration-300 flex items-center justify-center mx-auto"
+              onClick={handleWhatsAppClick}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <motion.button
-                className={`px-6 py-3 bg-green-500 text-white font-semibold rounded-full transition-all duration-300 ${isWhatsAppOpen ? 'w-12 h-12' : 'w-auto'}`}
-                onClick={() => setIsWhatsAppOpen(!isWhatsAppOpen)}
-              >
-                <AnimatePresence mode="wait">
-                  {isWhatsAppOpen ? (
-                    <motion.span
-                      key="whatsapp"
-                      initial={{ opacity: 0, rotate: -180 }}
-                      animate={{ opacity: 1, rotate: 0 }}
-                      exit={{ opacity: 0, rotate: 180 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <FaTimes className="mx-auto" />
-                    </motion.span>
-                  ) : (
-                    <motion.span
-                      key="chat"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                    >
-                      <FaWhatsapp className="inline-block mr-2" /> Chat with Me
-                    </motion.span>
-                  )}
-                </AnimatePresence>
-              </motion.button>
-              <AnimatePresence>
-                {isWhatsAppOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8, y: 10 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.8, y: 10 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white rounded-lg shadow-lg p-4"
-                  >
-                    <button
-                      onClick={handleWhatsAppClick}
-                      className="flex items-center justify-center bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors duration-300"
-                    >
-                      <FaWhatsapp className="mr-2" /> Chat on WhatsApp
-                    </button>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
+              <FaWhatsapp className="mr-2" /> Chat with Me
+            </motion.button>
           </div>
         </motion.div>
       </div>
