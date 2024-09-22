@@ -13,7 +13,7 @@ export default function Footer() {
             <h2 className="text-2xl font-bold mb-2">Mohammed Yazin</h2>
             <p className="text-gray-400">Full Stack Developer</p>
           </div>
-          <div className="flex space-x-4" data-aos="fade-left">
+          <div className="flex space-x-4" data-aos="fade-right">
             <a href="https://github.com/yazin123" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
               <FaGithub className="text-2xl" />
             </a>
