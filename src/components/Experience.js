@@ -7,7 +7,7 @@ import { FaBriefcase, FaGraduationCap, FaAward } from 'react-icons/fa';
 const experienceData = [
   {
     title: "Freelance Full Stack Developer and Trainer",
-    date: "2021 - Present",
+    date: "2020 - Present",
     location: "Remote",
     icon: FaBriefcase,
     details: [
@@ -19,8 +19,8 @@ const experienceData = [
     ]
   },
   {
-    title: "Bachelor of Vocation in Software Development",
-    date: "2019 - 2023",
+    title: "Graduation in Software Development",
+    date: "2021 - 2023",
     location: "MG University, Kottayam",
     icon: FaGraduationCap,
     details: [
@@ -31,7 +31,7 @@ const experienceData = [
   },
   {
     title: "Notable Project: Architecture Firm Website & CRM",
-    date: "2022",
+    date: "2023",
     location: "Client Project",
     icon: FaAward,
     details: [

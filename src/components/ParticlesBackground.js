@@ -1,17 +1,35 @@
-// File: src/components/ParticlesBackground.js
 'use client';
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Particles from "react-particles";
-import { loadSlim } from "tsparticles-slim"; // Use loadSlim instead of loadFull
+import { loadSlim } from "tsparticles-slim";
 
 export default function ParticlesBackground() {
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
+
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
   }, []);
 
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    }
+
+    // Set size initially
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <Particles
-      className="absolute inset-0"
       id="tsparticles"
       init={particlesInit}
       options={{
@@ -82,6 +100,15 @@ export default function ParticlesBackground() {
           },
         },
         detectRetina: true,
+      }}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: `${windowSize.width}px`,
+        height: `${windowSize.height}px`,
+        zIndex: -1,
+        pointerEvents: 'none'
       }}
     />
   );
