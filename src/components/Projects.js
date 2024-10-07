@@ -17,7 +17,7 @@ const projects = [
     title: 'Real Estate Web Platform',
     description: 'Designed and developed a platform for property sale, buy, and rent with integrated CRM features.',
     technologies: ['Next.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind'],
-    link: 'frontend-omega-eight-34.vercel.app',
+    link: 'https://frontend-omega-eight-34.vercel.app/',
     image: '/img/projects/realestate.png',
   },
   {
