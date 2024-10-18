@@ -21,12 +21,12 @@ export const metadata = {
     siteName: 'Mohammed Yazin',
   },
   icons: {
-    icon: '/favyazin.png',
-    shortcut: '/favyazin.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/img/favyazinround.png',
+    shortcut: '/img/favyazinround.png',
+    apple: '/img/yazin.jpg',
     other: {
       rel: 'apple-touch-icon-precomposed',
-      url: '/apple-touch-icon-precomposed.png',
+      url: '/img/favyazinround.png',
     },
   },
 };
