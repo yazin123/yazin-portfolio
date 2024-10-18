@@ -1,7 +1,7 @@
 // File: src/components/Header.js
 'use client';
 import { useState, useEffect } from 'react'
-import { FaGithub, FaWhatsapp, FaBars, FaTimes } from 'react-icons/fa'
+import { FaGithub, FaWhatsapp, FaBars, FaTimes, FaLinkedin } from 'react-icons/fa'
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -49,6 +49,9 @@ export default function Header() {
             </a>
             <a href="https://wa.me/917994857990/" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="text-2xl hover:text-blue-400 transition-colors" />
+            </a>
+            <a href="https://www.linkedin.com/in/mohammed-yazin-131736218/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="text-2xl hover:text-blue-400 transition-colors" />
             </a>
           </div>
 
