@@ -1,7 +1,6 @@
 import { Montserrat } from 'next/font/google';
 import './globals.css';
 import 'aos/dist/aos.css';
-import Head from 'next/head';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
@@ -15,25 +14,26 @@ export const metadata = {
     url: 'https://mohammedyazin.com',
     images: [
       {
-        url: 'https://mohammedyazin.com/img/yazin.jpg', // Use absolute URL
+        url: 'https://mohammedyazin.com/img/yazin.jpg',
         alt: 'Mohammed Yazin',
       },
     ],
-    site_name: 'Mohammed Yazin',
+    siteName: 'Mohammed Yazin',
+  },
+  icons: {
+    icon: '/img/favicon_io/favicon.ico',
+    shortcut: '/img/favicon_io/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/apple-touch-icon-precomposed.png',
+    },
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="icon" type="image/x-icon" href="/img/yazin.jpg" /> {/* Absolute path for favicon */}
-        <meta property="og:image" content="https://mohammedyazin.com/img/yazin.jpg" /> {/* Absolute URL for Open Graph */}
-        <meta property="og:image:alt" content="Mohammed Yazin" />
-        <meta property="og:url" content="https://mohammedyazin.com" />
-        <meta property="og:title" content="Mohammed Yazin - Full Stack Developer" />
-        <meta property="og:description" content="Explore the portfolio of Mohammed Yazin, a skilled developer in Next.js and Django." />
-      </Head>
       <body className={montserrat.className}>{children}</body>
     </html>
   );
