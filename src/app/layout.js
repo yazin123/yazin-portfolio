@@ -6,7 +6,7 @@ const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Mohammed Yazin - Full Stack Developer',
-  description: 'Portfolio of Mohammed Yazin, a passionate Full Stack Developer specializing in Website, ERP & CRM.',
+  description: "Explore Mohammed Yazin's portfolio, a passionate Full Stack Developer specializing in web development, ERP solutions, and CRM systems.",
   keywords: 'web developer, full stack developer, Django developer, Next.js developer, digital marketing',
   openGraph: {
     title: 'Mohammed Yazin - Full Stack Developer',
