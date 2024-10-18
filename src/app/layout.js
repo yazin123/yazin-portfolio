@@ -21,8 +21,8 @@ export const metadata = {
     siteName: 'Mohammed Yazin',
   },
   icons: {
-    icon: '/img/favicon_io/favicon.ico',
-    shortcut: '/img/favicon_io/favicon.ico',
+    icon: '/favyazin.png',
+    shortcut: '/favyazin.png',
     apple: '/apple-touch-icon.png',
     other: {
       rel: 'apple-touch-icon-precomposed',
