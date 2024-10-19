@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FaEnvelope, FaGithub, FaWhatsapp, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 const contactMethods = [
   { icon: FaEnvelope, label: 'Email', value: 'mohammedyazin4@gmail.com', link: 'mailto:mohammedyazin4@gmail.com' },
@@ -13,9 +14,44 @@ const contactMethods = [
 
 export default function Contact() {
   const [activeMethod, setActiveMethod] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [status, setStatus] = useState('');
 
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/917994857990', '_blank');
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    try {
+      await emailjs.send(
+        'service_0h8fzzw',
+        'template_3fu1qpm',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          to_email: 'mohammedyazin4@gmail.com',
+        },
+        'HW2nJfq8bXJJKNZ30'
+      );
+      setStatus('success');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    } catch (error) {
+      setStatus('error');
+    }
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -44,25 +80,73 @@ export default function Contact() {
         </div>
 
         <motion.div
-          className="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-lg"
+          className="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-lg mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
           <h3 className="text-2xl font-semibold mb-6 text-blue-300">Let's Create Something Amazing</h3>
-          <p className="text-gray-300 mb-6">
-            I'm always excited to work on new projects and explore innovative ideas. Whether you have a specific project in mind or just want to chat about the latest in tech, I'm all ears!
-          </p>
-          <div className="text-center">
-            <motion.button
-              className="px-6 py-3 bg-green-500 text-white font-semibold rounded-full transition-all duration-300 flex items-center justify-center mx-auto"
-              onClick={handleWhatsAppClick}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaWhatsapp className="mr-2" /> Chat with Me
-            </motion.button>
-          </div>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                required
+                className="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Your Email"
+                required
+                className="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="Your Phone Number"
+              className="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Your Message"
+              required
+              rows={4}
+              className="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <div className="flex justify-between items-center">
+              <button
+                type="submit"
+                className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-full transition-all duration-300 hover:bg-blue-600"
+                disabled={status === 'sending'}
+              >
+                {status === 'sending' ? 'Sending...' : 'Send Message'}
+              </button>
+              {status === 'success' && <p className="text-green-400">Message sent successfully!</p>}
+              {status === 'error' && <p className="text-red-400">Failed to send message. Please try again.</p>}
+            </div>
+          </form>
+        </motion.div>
+          <h1 className='text-center mb-4'>or</h1>
+        <motion.div className="text-center">
+          <motion.button
+            className="px-6 py-3 bg-green-500 text-white font-semibold rounded-full transition-all duration-300 flex items-center justify-center mx-auto"
+            onClick={handleWhatsAppClick}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FaWhatsapp className="mr-2" /> Chat with Me
+          </motion.button>
         </motion.div>
       </div>
     </section>
