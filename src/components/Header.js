@@ -50,7 +50,7 @@ export default function Header() {
             <a href="https://wa.me/917994857990/" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="text-2xl hover:text-blue-400 transition-colors" />
             </a>
-            <a href="https://www.linkedin.com/in/mohammed-yazin-131736218/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/mohammedyazin/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="text-2xl hover:text-blue-400 transition-colors" />
             </a>
           </div>
