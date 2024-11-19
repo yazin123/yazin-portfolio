@@ -26,7 +26,7 @@ export default function Footer() {
             <a href="https://www.instagram.com/hmm.yazin/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
               <FaInstagram className="text-2xl" />
             </a>
-            <a href="mailto:mohammedyazin4@gmail.com" className="hover:text-blue-400 transition-colors">
+            <a href="mailto:develop@mohammedyazin.com" className="hover:text-blue-400 transition-colors">
               <FaEnvelope className="text-2xl" />
             </a>
           </div>

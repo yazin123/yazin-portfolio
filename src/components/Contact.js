@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
 const contactMethods = [
-  { icon: FaEnvelope, label: 'Email', value: 'mohammedyazin4@gmail.com', link: 'mailto:mohammedyazin4@gmail.com' },
+  { icon: FaEnvelope, label: 'Email', value: 'develop@mohammedyazin.com', link: 'mailto:develop@mohammedyazin.com' },
   { icon: FaInstagram, label: 'Instagram', value: 'https://www.instagram.com/hmm.yazin/', link: 'https://www.instagram.com/hmm.yazin/' },
   { icon: FaGithub, label: 'GitHub', value: 'github.com/yazin123', link: 'https://github.com/yazin123' },
   { icon: FaLinkedin, label: 'LinkedIn', value: 'https://www.linkedin.com/in/mohammed-yazin-131736218/', link: 'https://www.linkedin.com/in/mohammed-yazin-131736218/' },
@@ -39,7 +39,7 @@ export default function Contact() {
           from_email: formData.email,
           phone: formData.phone,
           message: formData.message,
-          to_email: 'mohammedyazin4@gmail.com',
+          to_email: 'develop@mohammedyazin.com',
         },
         'HW2nJfq8bXJJKNZ30'
       );
