@@ -77,12 +77,16 @@ export default function Header() {
               </Link>
             ))}
             <div className="flex space-x-4 mt-4">
-              <a href="https://github.com/yazin123" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="text-2xl hover:text-blue-400 transition-colors" />
-              </a>
-              <a href="https://wa.me/917994857990/" target="_blank" rel="noopener noreferrer">
-              <FaWhatsapp className="text-2xl hover:text-blue-400 transition-colors" />
-            </a>
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="block py-2 hover:text-blue-400 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
             </div>
           </div>
         )}
