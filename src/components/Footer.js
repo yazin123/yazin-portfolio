@@ -17,7 +17,7 @@ export default function Footer() {
             <a href="https://github.com/yazin123" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
               <FaGithub className="text-2xl" />
             </a>
-            <a href="https://www.linkedin.com/in/mohammed-yazin-131736218/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+            <a href="https://www.linkedin.com/in/mohammedyazin/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
               <FaLinkedin className="text-2xl" />
             </a>
             <a href="https://wa.me/917994857990" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">

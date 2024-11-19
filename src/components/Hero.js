@@ -79,9 +79,9 @@ export default function Hero() {
         transition={{ delay: 0.8, duration: 0.8 }}
       >
         {[
-          { icon: FaGithub, href: "https://github.com/yourusername" },
-          { icon: FaLinkedin, href: "https://www.linkedin.com/in/mohammed-yazin-131736218/" },
-          { icon: FaEnvelope, href: "mailto:your.email@example.com" }
+          { icon: FaGithub, href: "https://github.com/yazin123" },
+          { icon: FaLinkedin, href: "https://www.linkedin.com/in/mohammedyazin/" },
+          { icon: FaEnvelope, href: "mailto:mohammedyazin4@gmail.com" }
         ].map((item, index) => (
           <motion.a
             key={index}
